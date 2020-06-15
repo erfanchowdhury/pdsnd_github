@@ -218,55 +218,6 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def do_you_want_to_see_raw_data():
-    print('helloworld')
-
-    print("Are you interested into looking at raw data") 
-    while True : 
-        answer = input("Please type Y for Yes and N for No").lower()
-
-        if answer!="y" and answer!="n" :
-
-            print("Wrong Input! Please type Y for Yes and N for No") 
-            continue
-
-        if answer == "y" :
-
-            while True :
-
-                print("Type C for Chicago, N for New York or W for Washington")
-
-                city_name = input("Please Enter The City Name You Want To Analyze: ").lower() 
-
-
-                if city_name != "n" and city_name != "c" and city_name!= "w" : 
-
-                    print ("Wrong Input! Type C for Chicago, N for New York or W for Washington ")
-                    continue  
-        
-                if city_name == "c" : 
-                    city = CITY_DATA["chicago"]
-                    for i in range(0,len(city),5) :
-                        #yield (i)  
-                        print(pd.read_csv(city).head(i))
-                        print("Do you want more ?")
-                        your_input = input("Yes or No").lower()
-
-                        if your_input == "yes" :
-                            continue 
-                        elif your_input == "no" : 
-                            break
-
-
-            #elif city_name == "n" : 
-             #   city = CITY_DATA["new york city"]
-             #   print(pd.DataFrame.(city))
-            #elif city_name == "w" : 
-            #    city = CITY_DATA["washington"] 
-             #   print(pd.DataFrame.(city))
-
-    return 1
-
 def main():
     while True:
         see_data = do_you_want_to_see_raw_data()
