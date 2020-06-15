@@ -5,7 +5,7 @@
 Bikeshare Analysis
 
 ### Description
-Provides insightful information about users in Chicago,Newyork City  and Washington
+Provides insightful information about users in Chicago,New York City and Washington
 
 ### Files used
 1.bikeshare.py 
